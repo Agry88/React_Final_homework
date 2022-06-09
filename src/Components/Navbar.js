@@ -5,12 +5,12 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import Avatar from '@mui/material/Avatar';
 import { useDispatch , useSelector } from "react-redux";
-import { SetFilter } from "../Actions"
+import { SetFilter } from "../Actions";
+import AvatarImage from "../Imgs/Me.jpg";
 
 export default function Navbar() {
   const [anchorEl1, setAnchorEl1] = React.useState(null); {/* 設置兩個用來控制Menu開關的State */}
@@ -95,8 +95,7 @@ export default function Navbar() {
               onClick={handleMenu} //點即時開啟Menu
               color="inherit"
             >
-              {/* <AccountCircle /> */}
-              <Avatar alt="Cheng yang" src="./Img/me.jpg" />
+              <Avatar alt="Cheng yang" src={AvatarImage} />
             </IconButton>
             <Menu
               id="menu-appbar"
